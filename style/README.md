@@ -56,13 +56,45 @@ Organization
 
 Sass
 ----
-
+### Formatting
 * Use the *Scss* syntax.
-* Use dashes when naming mixins, extends, classes or IDs: `span-columns` not `span_columns` or `spanColumns`.
-* Use descriptive names and write them in full-words: `$visual-grid-color` not `$color` or `$vslgrd-clr`.
+* Use hyphens when naming mixins, extends, classes & variables: `span-columns` not `span_columns` or `spanColumns`.
 * Use space between property and value: `width: 20px` not `width:20px`.
-* Order properties within rule sets alphabetically.
-* Leave a blank line between rule sets.
+* Use a blank line above selector that has styles.
+* Prefer hex color codes `#000`
+* Use `//` for comment blocks not `/* */`.
+* Use a space between selector and `{`
+* Use single quotation marks for attribute selectors and property values.
+* Use only lowercase, including colors.
+* Don't add a unit specification after `0` values, unless required by a mixin.
+
+### Order
+* Use alphabetical order for declarations and includes
+* Place extends at the top of your declaration list
+* Place media queries after the declaration list
+* Place nested selectors last
+
+### Selectors
+* Don't use ID's for style
+* Use meaningful names: `$visual-grid-color` not `$color` or `$vslgrd-clr`
+* Use ID and class names that are as short as possible but as long as necessary.
+* Append the prefix js- to ID's that are used by Javascript
+* Avoid using the direct descendant selector `>`
+* Avoid nesting  more than 4 selectors deep
+* Don't nest more than 6 selectors deep
+* Don't use the tag in the class name: `section.news` not `section.news-section`
+* Use tags on vague classes that need a qualifier like `.application` or `.main`
+* Avoid using tags on classes for generic markup `<div>`, `<span>`
+* Avoid using tags on classes with specific class names like `.featured-articles`
+
+### Organization
+* Use Bourbon for a Sass Library
+* Use Neat for a grid framework
+* Use Bitters / Base folder for style on tags, global variables, global extends and global mixins
+* Use Normalize as a browser reset
+* Use HTML structure for ordering of selectors. Don't just put styles at the bottom of the sass file.
+* Avoid having files longer than 100 lines
+* Prefer the same file structure that is found in app/views
 
 CoffeeScript
 ------------

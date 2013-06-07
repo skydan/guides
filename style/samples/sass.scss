@@ -1,0 +1,23 @@
+section.application {
+  color: #333;
+  font-family: $font-family;
+
+  .news {
+    float: left;
+
+    article {
+      p {
+        color: #444;
+        font-size: 1.3em;
+      }
+    }
+  }
+
+  .sidebar {
+    float: left;
+
+    h2 {
+      margin: 1em 0;
+    }
+  }
+}
